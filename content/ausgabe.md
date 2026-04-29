@@ -3,19 +3,19 @@
 Wohin das Ergebnis geht — der Output am Ende des Prozesses.
 
 ## Nachricht versenden
-Info per Mail, Teams, Slack oder als Newsletter rausschicken.
+Info per Mail, Chat oder Newsletter rausschicken.
 
 ## Dokument erzeugen
 Bericht, Protokoll oder Antrag als PDF oder bearbeitbares Dokument.
 
 ## Tabelle befüllen
-Zeile in Excel oder Google Sheets anlegen oder ergänzen.
+Zeile in einer Tabelle anlegen oder ergänzen.
 
 ## In Datenbank schreiben
-Datensatz in einer Datenbank anlegen oder aktualisieren — Postgres, Airtable, internes System.
+Datensatz in einer Datenbank anlegen oder aktualisieren — internes System oder externer Dienst.
 
 ## In Fachsoftware eintragen
-Datensatz anlegen oder aktualisieren — Vivendi, SoPart, Connext.
+Datensatz anlegen oder aktualisieren — z.B. im Klient:innen-System.
 
 ## Im Kalender eintragen
 Termin, Frist oder Wiedervorlage automatisch anlegen.
@@ -24,7 +24,7 @@ Termin, Frist oder Wiedervorlage automatisch anlegen.
 Beitrag auf Webseite oder Intranet — News, Stelle, Event.
 
 ## In Ordner ablegen
-Datei in SharePoint, Cloud oder Laufwerk speichern.
+Datei in Cloud oder Laufwerk speichern.
 
 ## Formular vorausfüllen
 Antrag oder Formular automatisch mit bekannten Daten befüllen.

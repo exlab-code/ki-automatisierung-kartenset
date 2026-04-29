@@ -9,7 +9,7 @@ Eine Mail kommt an und startet den Ablauf.
 Jemand füllt ein Online-Formular aus.
 
 ## Chat-Nachricht
-Eine Nachricht in Teams, Signal oder Slack.
+Eine Nachricht im Team-Chat oder Messenger.
 
 ## Sprachaufnahme
 Jemand spricht eine Notiz ein — nach Hausbesuch, Beratung, Meeting.
@@ -18,7 +18,7 @@ Jemand spricht eine Notiz ein — nach Hausbesuch, Beratung, Meeting.
 Ein analoges Dokument wird digitalisiert — Fax, Formular, Notiz.
 
 ## Datei in Ordner abgelegt
-Eine Datei wird in SharePoint, Cloud oder Laufwerk gespeichert.
+Eine Datei wird in Cloud oder Laufwerk gespeichert.
 
 ## Systemereignis
 Ein anderes System meldet, dass etwas passiert ist — Statusänderung, Webhook.

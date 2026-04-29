@@ -106,8 +106,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f3ef; color: #1a1a1a; 
 .cat-HINWEIS .card-icon svg { stroke: #4a4a47; fill: none; }
 .cat-HINWEIS .card-cat { color: #4a4a47; }
 
-/* Cover card — white, top accent strip, no badge icon */
-.cat-COVER { border-top: 5px solid #1a1a1a; }
+/* Cover card — white, no badge icon */
 .cat-COVER .card-header { background: #fff; padding: 18px 20px 0; }
 .cat-COVER .card-icon { display: none; }
 .cat-COVER .card-cat { color: #888; }
@@ -306,7 +305,7 @@ function printCards() {
 
     if (col.cover) {
       return `
-        <div style="position:absolute; top:${top}; left:${left}; width:105mm; height:148.5mm; box-sizing:border-box; background:#fff; border:0.3pt solid #d0cdc6; border-top:1.5mm solid #1a1a1a; display:flex; flex-direction:column; overflow:hidden; font-family:'DM Sans',sans-serif;">
+        <div style="position:absolute; top:${top}; left:${left}; width:105mm; height:148.5mm; box-sizing:border-box; background:#fff; border:0.3pt solid #d0cdc6; display:flex; flex-direction:column; overflow:hidden; font-family:'DM Sans',sans-serif;">
           <div style="padding:8mm 8mm 0; flex-shrink:0;">
             <span style="font-family:'IBM Plex Mono',monospace; font-size:9pt; font-weight:500; letter-spacing:0.02em; color:${col.text};">${LABELS[cat] || cat}</span>
           </div>

@@ -6,6 +6,16 @@ Das Kartenset hilft Teams dabei, ihre eigenen Prozesse so zu zerlegen, dass klar
 
 > **Leitgedanke:** KI ist ein Sprachmodell — gut in bestimmten sprachlichen Aufgaben. Wer das versteht, kann es im Alltag systematisch einsetzen — und dadurch im großen Maßstab Wert schaffen.
 
+---
+
+**Direkt loslegen:**
+
+- **[Druckfertige PDF herunterladen (v0.1)](https://github.com/exlab-code/ki-automatisierung-kartenset/releases/download/v0.1/ki-automatisierung-kartenset-v0.1.pdf)** — 60 Karten, 4 pro A4-Seite, fertig zum Ausdrucken.
+- **[Online-Version mit Filter und Druck](https://exlab-code.github.io/ki-automatisierung-kartenset/)** — Karten nach Kategorie filtern und gewünschte Auswahl drucken.
+- **[Workshop-Leitfaden lesen](WORKSHOP.md)** — Moderationsanleitung mit Ablauf, Materialien und Hintergrund.
+
+---
+
 ## Workshop-Kontext
 
 Entworfen für das **AWO Führungskräfte Forum am 27. April 2026**.

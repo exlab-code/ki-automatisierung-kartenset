@@ -16,6 +16,8 @@ Ziele des Workshops:
 - **Prozesse identifizieren**, die sich im AWO-Alltag mit KI sinnvoll automatisieren lassen — und solche, die es nicht tun sollten.
 - **Gemeinsam zerlegen**: Auslöser, Datenquelle, Sprach-Operation, Ausgabe, Mensch im Loop, Bedenken — Karte für Karte aufs Brown Paper, Pfeile dazwischen.
 
+Ausführliches Workshop-Format mit Ablauf, Materialien und Hintergrund: **[WORKSHOP.md](WORKSHOP.md)**.
+
 ## Online-Version
 
 Die Druckversion läuft direkt im Browser über GitHub Pages:

@@ -133,6 +133,12 @@ Jede Gruppe stellt kurz ihren modellierten Prozess vor. Wenn möglich, wird ein 
 
 Der vollständige Kartensatz ist als druckfertige PDF im [Release v0.1](https://github.com/exlab-code/ki-automatisierung-kartenset/releases/tag/v0.1) verfügbar oder direkt aus dem Browser über [exlab-code.github.io/ki-automatisierung-kartenset](https://exlab-code.github.io/ki-automatisierung-kartenset/) druckbar.
 
+### Eigenen Kartensatz für den eigenen Kontext
+
+**Tipp:** Repository forken → Karten in `content/*.md` direkt im GitHub-Web-Editor anpassen (andere Kartennamen, sektorspezifische Datenquellen, eigene Bedenken) → GitHub Pages im Fork aktivieren → der angepasste Druck-Generator ist sofort unter `https://<dein-user>.github.io/ki-automatisierung-kartenset/` verfügbar und gibt die eigene Version druckfertig als A4 (4 Karten pro Seite) aus.
+
+Damit lässt sich der Baukasten an Branche, Träger, Sprache oder spezifischen Workshop anpassen — ohne Code-Kenntnisse, ohne lokales Setup. Schritt-für-Schritt im [README](README.md#eigene-version-forken--anpassen).
+
 ### Brainstorming-Worksheet
 
 Ein A4-Blatt (quer) pro Person für die Einzelarbeit. Enthält Impulsfragen zur Identifikation textlastiger Prozesse und Platz zum Sammeln und Auswählen.

@@ -24,9 +24,10 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f3ef; color: #1a1a1a; 
 .filter-btn.active { color: #fff; border-color: transparent; }
 .filter-btn[data-cat="ALL"].active { background: #444; }
 .filter-btn[data-cat="START"].active { background: #2563a8; }
+.filter-btn[data-cat="INPUT"].active { background: #1c5e63; }
 .filter-btn[data-cat="MODELL"].active { background: #0f7060; }
 .filter-btn[data-cat="AUSGABE"].active { background: #9e4420; }
-.filter-btn[data-cat="MENSCH"].active { background: #a03030; }
+.filter-btn[data-cat="MENSCH"].active { background: #5a3290; }
 .filter-btn[data-cat="BEDENKEN"].active { background: #96650e; }
 
 .print-btn {
@@ -75,6 +76,11 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f3ef; color: #1a1a1a; 
 .cat-START .card-icon svg { stroke: #1e4f8a; fill: none; }
 .cat-START .card-cat { color: #1e4f8a; }
 
+.cat-INPUT .card-header { background: #d4ecec; }
+.cat-INPUT .card-icon { background: #7ec0c0; }
+.cat-INPUT .card-icon svg { stroke: #1c5e63; fill: none; }
+.cat-INPUT .card-cat { color: #1c5e63; }
+
 .cat-MODELL .card-header { background: #d1f5e8; }
 .cat-MODELL .card-icon { background: #7edbb8; }
 .cat-MODELL .card-icon svg { stroke: #0a5e4a; fill: none; }
@@ -85,10 +91,10 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f3ef; color: #1a1a1a; 
 .cat-AUSGABE .card-icon svg { stroke: #7a3315; fill: none; }
 .cat-AUSGABE .card-cat { color: #7a3315; }
 
-.cat-MENSCH .card-header { background: #fde2e2; }
-.cat-MENSCH .card-icon { background: #f0a0a0; }
-.cat-MENSCH .card-icon svg { stroke: #7a2020; fill: none; }
-.cat-MENSCH .card-cat { color: #7a2020; }
+.cat-MENSCH .card-header { background: #ede2f5; }
+.cat-MENSCH .card-icon { background: #b8a3dc; }
+.cat-MENSCH .card-icon svg { stroke: #4a2c7e; fill: none; }
+.cat-MENSCH .card-cat { color: #4a2c7e; }
 
 .cat-BEDENKEN .card-header { background: #fef3d6; }
 .cat-BEDENKEN .card-icon { background: #f0c860; }
@@ -124,6 +130,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f3ef; color: #1a1a1a; 
   <h1>Prozess-Baukasten</h1>
   <button class="filter-btn active" data-cat="ALL" onclick="filter('ALL', this)">Alle</button>
   <button class="filter-btn" data-cat="START" onclick="filter('START', this)">Start</button>
+  <button class="filter-btn" data-cat="INPUT" onclick="filter('INPUT', this)">Input</button>
   <button class="filter-btn" data-cat="MODELL" onclick="filter('MODELL', this)">Sprachmodell</button>
   <button class="filter-btn" data-cat="AUSGABE" onclick="filter('AUSGABE', this)">Ausgabe</button>
   <button class="filter-btn" data-cat="MENSCH" onclick="filter('MENSCH', this)">Mensch</button>
@@ -131,6 +138,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f3ef; color: #1a1a1a; 
   <select id="printSelect" style="margin-left:auto; padding:6px 10px; border-radius:8px; border:1.5px solid #d0cdc6; font-family:inherit; font-size:13px; background:#fff;">
     <option value="ALL">Alle drucken</option>
     <option value="START">Nur Start</option>
+    <option value="INPUT">Nur Input</option>
     <option value="MODELL">Nur Sprachmodell</option>
     <option value="AUSGABE">Nur Ausgabe</option>
     <option value="MENSCH">Nur Mensch</option>
@@ -147,6 +155,7 @@ body { font-family: 'DM Sans', sans-serif; background: #f5f3ef; color: #1a1a1a; 
 const LABELS = {
   COVER: 'Cover',
   START: 'Start',
+  INPUT: 'Input',
   MODELL: 'Sprachmodell',
   AUSGABE: 'Ausgabe',
   MENSCH: 'Mensch',
@@ -156,6 +165,7 @@ const LABELS = {
 
 const ICONS = {
   START: '<svg viewBox="0 0 16 16" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="4,2 13,8 4,14" fill="none"/></svg>',
+  INPUT: '<svg viewBox="0 0 16 16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="8" cy="3.5" rx="5" ry="1.5" fill="none"/><path d="M3 3.5 V 12.5 C 3 13.3 5.2 14 8 14 C 10.8 14 13 13.3 13 12.5 V 3.5" fill="none"/><path d="M3 8 C 3 8.8 5.2 9.5 8 9.5 C 10.8 9.5 13 8.8 13 8" fill="none"/></svg>',
   MODELL: '<svg viewBox="0 0 16 16" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="1.5" width="12" height="13" rx="2" fill="none"/><line x1="5" y1="5.5" x2="11" y2="5.5"/><line x1="5" y1="8.5" x2="11" y2="8.5"/><line x1="5" y1="11.5" x2="9" y2="11.5"/></svg>',
   AUSGABE: '<svg viewBox="0 0 16 16" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="9,4 13,8 9,12"/></svg>',
   MENSCH: '<svg viewBox="0 0 16 16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="5" r="2.8" fill="none"/><path d="M2.5,15 C2.5,11 5,9 8,9 C11,9 13.5,11 13.5,15" fill="none"/></svg>',
@@ -166,6 +176,7 @@ const ICONS = {
 const CATEGORIES = [
   { code: 'COVER',    file: 'content/cover.md' },
   { code: 'START',    file: 'content/start.md' },
+  { code: 'INPUT',    file: 'content/input.md' },
   { code: 'MODELL',   file: 'content/sprachmodell.md' },
   { code: 'AUSGABE',  file: 'content/ausgabe.md' },
   { code: 'MENSCH',   file: 'content/mensch.md' },
@@ -274,9 +285,10 @@ function printCards() {
   const COLORS = {
     COVER:    { bg:'#fff',    icon:'#fff',    iconStroke:'#1a1a1a', text:'#888',    cover:true },
     START:    { bg:'#dbeafe', icon:'#93bbf0', iconStroke:'#1e4f8a', text:'#1e4f8a' },
+    INPUT:    { bg:'#d4ecec', icon:'#7ec0c0', iconStroke:'#1c5e63', text:'#1c5e63' },
     MODELL:   { bg:'#d1f5e8', icon:'#7edbb8', iconStroke:'#0a5e4a', text:'#0a5e4a' },
     AUSGABE:  { bg:'#fde8df', icon:'#f0b196', iconStroke:'#7a3315', text:'#7a3315' },
-    MENSCH:   { bg:'#fde2e2', icon:'#f0a0a0', iconStroke:'#7a2020', text:'#7a2020' },
+    MENSCH:   { bg:'#ede2f5', icon:'#b8a3dc', iconStroke:'#4a2c7e', text:'#4a2c7e' },
     BEDENKEN: { bg:'#fef3d6', icon:'#f0c860', iconStroke:'#6b4005', text:'#6b4005' },
     HINWEIS:  { bg:'#e8e7e2', icon:'#c4c3bc', iconStroke:'#4a4a47', text:'#4a4a47' }
   };
